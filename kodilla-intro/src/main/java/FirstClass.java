@@ -1,7 +1,14 @@
-public class FirstClass {                           // [1]
-    public static void main(String[] args) {         // [2]
-        System.out.println("Hello from FirstClass!");// [3]
-        String welcomeNote = "Hello from FirstClass!";
-        System.out.println(welcomeNote);
+public class FirstClass {
+    public static void main(String[] args) {
+        Notebook notebook = new Notebook("600g", 1000);
+        System.out.println(notebook.weight + " " + notebook.price);
+
+        Notebook heavyNotebook = new Notebook("2000g", 1500);
+        System.out.println(heavyNotebook.weight +" "+ heavyNotebook.price);
+
+        Notebook oldNotebook = new Notebook("1600g", 500);
+        System.out.println(oldNotebook.weight + " "+ oldNotebook.price);
+
+
     }
 }
