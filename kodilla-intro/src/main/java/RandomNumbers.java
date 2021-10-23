@@ -6,21 +6,21 @@ import java.util.Random;
 public class RandomNumbers {
     public static void main(String[] args) {
 
-
-
-        ArrayList<Integer> numbers = new ArrayList();
-        numbers= RandomGen(5000);
+        RandomNumbers randomNumber = new RandomNumbers();
+        ArrayList numbers = randomNumber.RandomGen(5000);                                  // [1]
         System.out.println(numbers);
 
-        int maxValue = MaxNumber(numbers);
+        RandomNumbers max = new RandomNumbers();
+        int maxValue = max.MaxNumber(numbers);
         System.out.println("Najwyższa liczba "+maxValue);
-        int minValue = MinNumber(numbers);
+
+        RandomNumbers min = new RandomNumbers();
+        int minValue = min.MinNumber(numbers);
         System.out.println("Najniższa liczba " +minValue);
     }
 
 
-
-    public static ArrayList RandomGen(int max) {
+    public  ArrayList RandomGen(int max) {
         int sum = 0;
         int result = 0;
         Random random = new Random();
@@ -38,7 +38,7 @@ public class RandomNumbers {
         return numbers;
 
     }
-    public static Integer MaxNumber(ArrayList numbers){
+    public Integer MaxNumber(ArrayList numbers){
         Integer i = (Integer) Collections.max(numbers);
         return i;
     }

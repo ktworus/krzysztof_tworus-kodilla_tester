@@ -1,11 +1,22 @@
-/*public class Book {
+public class Book {
+    public static void main(String[] args) {
 
-    Book book = Book.of("Isaac Asimov", "The Galaxy");
+        Book book = Book.of("Isaac Asimov ", "The Galaxy");
 
-    private String author;
-    private String title;
+        System.out.println(Book.of("Isaac Asimov ", "The Galaxy"));
 
-    public static String of(author, title) {
+    }
 
+    private static String author;
+    private static String title;
 
-    }*/
+    public static Book of(String author, String title) {
+
+       String joined = author + title;
+
+       Book ojoined = joined;
+
+       return ojoined;
+
+    }
+}
