@@ -9,6 +9,9 @@ public class Tryouts {
 
         metoda2(word3, word4);
 
+        char [] litery = metoda3("sherlock");
+        System.out.println(litery[0]+" "+ litery[1]);
+
 
 
     }
@@ -25,6 +28,13 @@ public class Tryouts {
         String result1 = result;
         System.out.println(result1);
     }
+    public static char[] metoda3(String word){
+        char[] letters = new char[word.length()];
+        for (int i=0; i< word.length(); i++){
+        letters [i] = word.charAt(i);}
+        System.out.println(letters);
 
+        return letters;
+}
 
 }
