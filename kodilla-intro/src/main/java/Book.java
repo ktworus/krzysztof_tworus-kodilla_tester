@@ -1,24 +1,30 @@
 import java.lang.Object;
 public class Book {
-    private static String author;
-    private static String title;
-
-
     public static void main(String[] args) {
 
-        Book book = new Book();
-        Book.of("Isaac Asimov ", "The Galaxy");
-
+        Book book = Book.of("Isaac Asimov", "The Galaxy");
 
     }
 
 
 
-    public static Object of(String author, String title) {
+    private static String author = "Isaac Asimov ";
+    private static String title = "The Galaxy";
 
-       String joined = author + title;
-       Object oJoined = joined;
-       return joined;
+
+
+    public static Book of(String author, String title) {
+        Book books = new Book();
+        System.out.println(books.author + books.title);
+        return books;
 
     }
+
+
+
+
+
+
+
+
 }
