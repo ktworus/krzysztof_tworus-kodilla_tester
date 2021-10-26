@@ -8,13 +8,15 @@ public class Book {
 
 
 
-    private static String author = "Isaac Asimov ";
-    private static String title = "The Galaxy";
+    private  String author ;
+    private  String title ;
 
 
 
     public static Book of(String author, String title) {
         Book books = new Book();
+        books.author = author;
+        books.title = title;
         System.out.println(books.author + books.title);
         return books;
 
