@@ -1,19 +1,29 @@
+
 package com.kodilla.abstracts.homework;
 
 public class Circle extends Shape{
-    public Circle(){
-        super(0,0,5,3.14);
+    private int r;
+    private double PI;
+
+
+    public  Circle(int r, double PI){
+        this.r = r;
+        this.PI = PI;
+
     }
+
+
     @Override
     public void calculatePole() {
-        double pole = getPI() * getR()*getR();
+        double pole = PI*r*r;
         System.out.println("Pole okręgu " + pole);
     }
 
     @Override
     public void calculateObwod() {
-        double obwod = 2* getPI()*getR();
+        double obwod = 2* PI*r;
         System.out.println("Obwod okręgu " + obwod);
 
     }
 }
+
