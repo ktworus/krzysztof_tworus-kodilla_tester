@@ -12,7 +12,7 @@ public class User {
         User user7 = new User(130, "Kazik");
         User[] users = {user1, user2, user3, user4, user5, user6, user7};
 
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < users.length; i++) {
             int age = users[i].getAge();
             sum = sum + age;

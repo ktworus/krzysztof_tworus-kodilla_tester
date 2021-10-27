@@ -3,19 +3,23 @@ package com.kodilla.abstracts.homework;
 public class Square extends Shape{
 
     public Square(){
-        super(3,3,3,3.14);
+        super(4,4,0,0);
 
 
     }
 
-    public void calculatePole(int firstSide, int secondSide) {
-        int pole = firstSide * secondSide;
-        System.out.println(pole);
+
+    @Override
+    public void calculatePole() {
+        int pole = getFirstSide()*getFirstSide();
+        System.out.println("Pole kwadratu " +pole);
+
     }
 
     @Override
-    public void calculateObwod(int firstSide) {
-        int obwod = 4*firstSide;
-        System.out.println(obwod);
+    public void calculateObwod() {
+        int obwod = 4*getFirstSide();
+        System.out.println("Obwód kwadratu "+ obwod);
+
     }
 }
