@@ -3,15 +3,12 @@ package com.kodilla.basic_assertion;
 public class Application {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        double a = 8;
-        double b = 5;
-        double sumResult = calculator.sum(a, b);
-        double subtractResult = calculator.subtract(a, b);
+        int a = 8;
+        int b = 5;
+        int sumResult = calculator.sum(a, b);
+        int subtractResult = calculator.subtract(a, b);
         double squareResult = calculator.square(a);
         double expectedSquare = 65;
-        double delta;
-
-
 
        boolean correct = ResultChecker.assertEquals(13, sumResult,0);
         if (correct) {
