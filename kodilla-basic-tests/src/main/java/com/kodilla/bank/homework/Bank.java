@@ -1,16 +1,22 @@
 
+
 package com.kodilla.bank.homework;
 public class Bank {
     Bank bank;
+
+
+
     private CashMachine machine1;
     private CashMachine machine2;
-    CashMachine[] machines = new CashMachine[]{machine1,machine2};
+
 
     public Bank(){
         this.bank = bank;
 
+
         this.machine1 = new CashMachine();
         this.machine2 = new CashMachine();
+
 
     }
     public void addMachine1Transaction(int transaction) {

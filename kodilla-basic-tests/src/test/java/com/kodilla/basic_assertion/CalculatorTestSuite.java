@@ -10,7 +10,7 @@ public class CalculatorTestSuite {
         int a = 58;
         int b = 8;
         int sumResult = calculator.sum(a, b);
-        assertEquals(69, sumResult,0);
+        assertEquals(66, sumResult,0);
     }
 
     @Test
@@ -19,7 +19,7 @@ public class CalculatorTestSuite {
         int a = 10;
         int b = 8;
         int subtractResult = calculator.subtract(a, b);
-        assertEquals(4, subtractResult,0);
+        assertEquals(2, subtractResult,0);
     }
 
     @Test
@@ -27,6 +27,6 @@ public class CalculatorTestSuite {
         Calculator calculator = new Calculator();
         double a = 5.11;
         double squareResult = calculator.square(a);
-        assertEquals(27.11,squareResult, 0.1);
+        assertEquals(26.10,squareResult, 0.1);
     }
 }

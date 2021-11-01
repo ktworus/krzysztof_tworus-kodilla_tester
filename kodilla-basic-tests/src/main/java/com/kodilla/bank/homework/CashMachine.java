@@ -4,7 +4,6 @@ public class CashMachine {
     private int[] transactions;
     private int size;
 
-
     public CashMachine() {
         this.size = 0;
         this.transactions = new int[0];
