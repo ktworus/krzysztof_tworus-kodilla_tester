@@ -18,14 +18,14 @@ public class VW implements Car{
 
     @Override
     public void increaseSpeed() {
-        speedIncrease = 30;
+
         speed = speed+speedIncrease;
 
     }
 
     @Override
     public void decreaseSpeed() {
-        speedDecrease = 1;
+
         speed = speed-speedDecrease;
     }
 }

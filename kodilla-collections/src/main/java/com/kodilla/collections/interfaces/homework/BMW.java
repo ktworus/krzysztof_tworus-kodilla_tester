@@ -18,14 +18,14 @@ public class BMW implements Car{
 
     @Override
     public void increaseSpeed() {
-        speedIncrease = 20;
+
         speed = speed+speedIncrease;
 
     }
 
     @Override
     public void decreaseSpeed() {
-        speedDecrease = 1;
+
         speed = speed-speedDecrease;
     }
 }

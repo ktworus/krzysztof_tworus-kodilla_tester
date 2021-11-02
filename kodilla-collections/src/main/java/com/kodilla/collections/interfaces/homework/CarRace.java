@@ -2,9 +2,9 @@ package com.kodilla.collections.interfaces.homework;
 
 public class CarRace {
     public static void main(String[] args) {
-    Audi audi = new Audi(70, 10,5);
-    BMW bmw = new BMW(70, 20,5);
-    VW vw = new VW(70,30,5);
+    Audi audi = new Audi(100, 10,2);
+    BMW bmw = new BMW(100, 20,2);
+    VW vw = new VW(100,30,2);
         System.out.println("Audi");
         doRace(audi);
         System.out.println("Bmw");
