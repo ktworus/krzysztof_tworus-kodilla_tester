@@ -10,18 +10,18 @@ public class BankTestSuite {
     public void shouldReturnTotalSaldo() {
 
         Bank bank = new Bank();
-        bank.addMachine1Transaction(4);
-        bank.addMachine1Transaction(5);
-        bank.addMachine1Transaction(6);
-        bank.addMachine1Transaction(-2);
-        bank.addMachine1Transaction(-3);
-        bank.addMachine2Transaction(10);
-        bank.addMachine2Transaction(8);
-        bank.addMachine2Transaction(12);
-        bank.addMachine2Transaction(-4);
-        bank.addMachine2Transaction(-6);
-        bank.addMachine1Transaction(0);
-        bank.addMachine2Transaction(0);
+        bank.addMachineTransaction(4, 0);
+        bank.addMachineTransaction(5,0);
+        bank.addMachineTransaction(6,0);
+        bank.addMachineTransaction(-2,0);
+        bank.addMachineTransaction(-3,0);
+        bank.addMachineTransaction(10,1);
+        bank.addMachineTransaction(8,1);
+        bank.addMachineTransaction(12,1);
+        bank.addMachineTransaction(-4,1);
+        bank.addMachineTransaction(-6,1);
+        bank.addMachineTransaction(0,0);
+        bank.addMachineTransaction(0,1);
 
         assertEquals(30,bank.getTotalSum());
         System.out.println(bank.getTotalSum());
@@ -31,18 +31,18 @@ public class BankTestSuite {
     public void shouldReturnNumberofPayOuts() {
 
         Bank bank = new Bank();
-        bank.addMachine1Transaction(4);
-        bank.addMachine1Transaction(5);
-        bank.addMachine1Transaction(6);
-        bank.addMachine1Transaction(-2);
-        bank.addMachine1Transaction(-3);
-        bank.addMachine2Transaction(10);
-        bank.addMachine2Transaction(8);
-        bank.addMachine2Transaction(12);
-        bank.addMachine2Transaction(-4);
-        bank.addMachine2Transaction(-6);
-        bank.addMachine1Transaction(0);
-        bank.addMachine2Transaction(0);
+        bank.addMachineTransaction(4, 0);
+        bank.addMachineTransaction(5,0);
+        bank.addMachineTransaction(6,0);
+        bank.addMachineTransaction(-2,0);
+        bank.addMachineTransaction(-3,0);
+        bank.addMachineTransaction(10,1);
+        bank.addMachineTransaction(8,1);
+        bank.addMachineTransaction(12,1);
+        bank.addMachineTransaction(-4,1);
+        bank.addMachineTransaction(-6,1);
+        bank.addMachineTransaction(0,0);
+        bank.addMachineTransaction(0,1);
 
         assertEquals(4,bank.getTotalNumberPayOuts());
     }
@@ -50,18 +50,18 @@ public class BankTestSuite {
     public void shouldReturnNumberofPayIns() {
 
         Bank bank = new Bank();
-        bank.addMachine1Transaction(4);
-        bank.addMachine1Transaction(5);
-        bank.addMachine1Transaction(6);
-        bank.addMachine1Transaction(-2);
-        bank.addMachine1Transaction(-3);
-        bank.addMachine2Transaction(10);
-        bank.addMachine2Transaction(8);
-        bank.addMachine2Transaction(12);
-        bank.addMachine2Transaction(-4);
-        bank.addMachine2Transaction(-6);
-        bank.addMachine1Transaction(0);
-        bank.addMachine2Transaction(0);
+        bank.addMachineTransaction(4, 0);
+        bank.addMachineTransaction(5,0);
+        bank.addMachineTransaction(6,0);
+        bank.addMachineTransaction(-2,0);
+        bank.addMachineTransaction(-3,0);
+        bank.addMachineTransaction(10,1);
+        bank.addMachineTransaction(8,1);
+        bank.addMachineTransaction(12,1);
+        bank.addMachineTransaction(-4,1);
+        bank.addMachineTransaction(-6,1);
+        bank.addMachineTransaction(0,0);
+        bank.addMachineTransaction(0,1);
 
         assertEquals(6,bank.getTotalNumberPayIns());
         System.out.println(bank.getTotalNumberPayIns());
@@ -70,18 +70,18 @@ public class BankTestSuite {
     public void shouldReturnAveragePayIn() {
 
         Bank bank = new Bank();
-        bank.addMachine1Transaction(4);
-        bank.addMachine1Transaction(5);
-        bank.addMachine1Transaction(6);
-        bank.addMachine1Transaction(-2);
-        bank.addMachine1Transaction(-3);
-        bank.addMachine2Transaction(10);
-        bank.addMachine2Transaction(8);
-        bank.addMachine2Transaction(12);
-        bank.addMachine2Transaction(-4);
-        bank.addMachine2Transaction(-6);
-        bank.addMachine1Transaction(0);
-        bank.addMachine2Transaction(0);
+        bank.addMachineTransaction(4, 0);
+        bank.addMachineTransaction(5,0);
+        bank.addMachineTransaction(6,0);
+        bank.addMachineTransaction(-2,0);
+        bank.addMachineTransaction(-3,0);
+        bank.addMachineTransaction(10,1);
+        bank.addMachineTransaction(8,1);
+        bank.addMachineTransaction(12,1);
+        bank.addMachineTransaction(-4,1);
+        bank.addMachineTransaction(-6,1);
+        bank.addMachineTransaction(0,0);
+        bank.addMachineTransaction(0,1);
 
         assertEquals(8,bank.getAveragePayIn(),1);
         System.out.println("Expected 8 "+ bank.getAveragePayIn());
@@ -90,18 +90,18 @@ public class BankTestSuite {
     public void shouldReturnAveragePayOut() {
 
         Bank bank = new Bank();
-        bank.addMachine1Transaction(4);
-        bank.addMachine1Transaction(5);
-        bank.addMachine1Transaction(6);
-        bank.addMachine1Transaction(-2);
-        bank.addMachine1Transaction(-3);
-        bank.addMachine2Transaction(10);
-        bank.addMachine2Transaction(8);
-        bank.addMachine2Transaction(12);
-        bank.addMachine2Transaction(-4);
-        bank.addMachine2Transaction(-6);
-        bank.addMachine1Transaction(0);
-        bank.addMachine2Transaction(0);
+        bank.addMachineTransaction(4, 0);
+        bank.addMachineTransaction(5,0);
+        bank.addMachineTransaction(6,0);
+        bank.addMachineTransaction(-2,0);
+        bank.addMachineTransaction(-3,0);
+        bank.addMachineTransaction(10,1);
+        bank.addMachineTransaction(8,1);
+        bank.addMachineTransaction(12,1);
+        bank.addMachineTransaction(-4,1);
+        bank.addMachineTransaction(-6,1);
+        bank.addMachineTransaction(0,0);
+        bank.addMachineTransaction(0,1);
 
         assertEquals(-4,bank.getAveragePayOut(),0.5);
 

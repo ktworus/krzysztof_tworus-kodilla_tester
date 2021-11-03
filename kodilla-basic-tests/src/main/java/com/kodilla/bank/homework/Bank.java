@@ -7,11 +7,9 @@ public class Bank {
     private CashMachine machine2 = new CashMachine();
     private CashMachine[] machines = {machine1, machine2};
 
-    public void addMachine1Transaction(int transaction) {
-        this.machines[0].add(transaction);
-    }
-    public void addMachine2Transaction(int transaction) {
-        this.machines[1].add(transaction);
+    public void addMachineTransaction(int transaction, int index) {
+        this.machines[index].add(transaction);
+
     }
     public int getTotalSum() {
         int totalSum = 0;
