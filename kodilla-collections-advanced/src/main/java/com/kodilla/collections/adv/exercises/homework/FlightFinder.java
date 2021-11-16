@@ -10,7 +10,7 @@ public class FlightFinder {
 
     List <Flight> result = new ArrayList<>();
     for(Flight flight: FlightRepository.getFlightsTable()){
-        if(flight.departure==departure){
+        if(flight.getDeparture().equals(departure)){
                 result.add(flight);}
         }
     return result;
@@ -19,7 +19,7 @@ public class FlightFinder {
     public List<Flight> findFlightsTo(String arrival) {
         List <Flight> result = new ArrayList<>();
         for(Flight flight: FlightRepository.getFlightsTable()){
-            if(flight.arrival==arrival){
+            if(flight.getArrival().equals(arrival)){
                 result.add(flight);}
         }
     return result;
