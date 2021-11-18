@@ -5,7 +5,7 @@ import java.util.Objects;
 public class User {
     private String username;
     private int age;
-    private int numberOfPost;
+    public int numberOfPost;
     private String group;
 
 
