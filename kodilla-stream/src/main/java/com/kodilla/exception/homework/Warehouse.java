@@ -7,26 +7,22 @@ import java.util.stream.Collectors;
 public class Warehouse {
 
 
-    public static void addOrder(Order order) {
-        List orders = new ArrayList<>();
+     List<Order> orders = new ArrayList<>();
+
+    public  void addOrder(Order order) {
+        orders.add(order);
+
+
     }
 
+    public  Order getOrder(String number) throws OrderDoesntExistException {
 
-
-
-
-
-        public Order getOrder (String number) {
-        Order selectedOrder = WarehouseApp.getorders()
-           .stream()
-                .filter(u->u.equals(getOrder(number)))
-                .map(u->u.getNumber())
-
-
-
+       Order selectedOrder = orders
+               .stream()
+               .filter(u->u.getNumber().equals(number))
+               .findAny().orElseThrow(()->new OrderDoesntExistException());
 
 
         return selectedOrder;
-        }
     }
 }
