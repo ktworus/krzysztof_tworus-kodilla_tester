@@ -17,12 +17,16 @@ public class Warehouse {
 
     public  Order getOrder(String number) throws OrderDoesntExistException {
 
-       Order selectedOrder = orders
+      List <Order> selectedOrder = orders
                .stream()
                .filter(u->u.getNumber().equals(number))
-               .findAny().orElseThrow(()->new OrderDoesntExistException());
+               /*.findAny().orElseThrow(()->new OrderDoesntExistException());*/
+               .collect(Collectors.toList());
+               if(selectedOrder.isEmpty()){
+                   throw new OrderDoesntExistException();
+               }
 
 
-        return selectedOrder;
+        return selectedOrder.get(0);
     }
 }
