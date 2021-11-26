@@ -31,10 +31,10 @@ public class BookApplication {
         System.out.println(book3.getTitle()+" "+book3.getAuthor()+" "+book3.hashCode());
         System.out.println("------");
 
-        for (Book newBook: BookManager.books
+       for (Book newBook: BookManager.books
              ) {
-            System.out.println(newBook.getTitle() + " " + newBook.getAuthor() + " " +newBook.hashCode());
-        }
+           System.out.println(newBook.getTitle() + " " + newBook.getAuthor() + " " + newBook.hashCode());
+       }
         System.out.println("------");
     }
 }
