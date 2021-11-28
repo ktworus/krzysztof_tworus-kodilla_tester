@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class GamblingMachineTestSuite {
     GamblingMachine gamblingMachine = new GamblingMachine();
     Set<Integer> testNumbers = new HashSet<>();
+    int size;
     @ParameterizedTest
     @CsvFileSource(resources = "/GamblingMachine.csv", numLinesToSkip = 1)
 
@@ -26,6 +27,13 @@ public class GamblingMachineTestSuite {
     public void toCheckNumberOfWins(Set<Integer> testNumbers, int expected) throws InvalidNumbersException {
         assertEquals(expected, gamblingMachine.howManyWins(testNumbers));
     }
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Gambling computer numbers.csv", numLinesToSkip = 1)
+    public void toCheckGeneratedNumbers(Set<Integer> testNumbers, Set<Integer> receivedNumbers){
+        assertEquals(testNumbers.size(), gamblingMachine.);
+
+    }
+
 
 
 }
