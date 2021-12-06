@@ -17,13 +17,13 @@ public class BookApplication {
 
         System.out.println("------");
 
-        if(book.equals(book3)) {
+       /* if(book.equals(book3)) {
             System.out.println("Book adresses are the same");
         }else
-            System.out.println("Book adresses are different");
+            System.out.println("Book adresses are different");*/
 
 
-        System.out.println("*********");
+       System.out.println("*********");
 
         System.out.println(book.getTitle()+" "+book.getAuthor()+" "+book.hashCode());
         System.out.println(book1.getTitle()+" "+book1.getAuthor()+" "+book1.hashCode());
