@@ -17,7 +17,7 @@ public class BookApplication {
 
         System.out.println("------");
 
-       /* if(book.equals(book3)) {
+      /* if(book.equals(book3)) {
             System.out.println("Book adresses are the same");
         }else
             System.out.println("Book adresses are different");*/
