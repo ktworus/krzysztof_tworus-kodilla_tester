@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class SimpleApplication {
 
-    private MessageService messageService;
+    private SkypeMessageService messageService;
 
-    public SimpleApplication(MessageService messageService) {
+    public SimpleApplication(SkypeMessageService messageService) {
         this.messageService = messageService;
     }
 

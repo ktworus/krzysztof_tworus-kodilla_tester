@@ -1,3 +1,4 @@
+/*
 package com.kodilla.spring.basic.spring_dependency_injection;
 
 import org.springframework.stereotype.Component;
@@ -9,4 +10,4 @@ public class TextMessageService implements MessageService {
     public String send(String message, String receiver) {
         return "Sending text [" + message + "] to: " + receiver;
     }
-}
+}*/
