@@ -7,14 +7,7 @@ public class SUV implements Car{
 
     @Override
     public boolean hasHeadlightsTurnedOn() {
-        LocalTime time = LocalTime.now();
-        if (time.isAfter(LocalTime.parse("20:00")) && time.isBefore(LocalTime.parse("06:00")) ){
-            System.out.println("Lights on");
-            return true;
-        }
-        else{
-            return false;
-        }
+        return Car.super.hasHeadlightsTurnedOn();
 
     }
     @Override

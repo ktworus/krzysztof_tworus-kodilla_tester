@@ -35,16 +35,16 @@ public class CarConfigTestSuite {
         List<String> possibleTypes = Arrays.asList("SUV", "Sedan", "Cabrio");
         Assertions.assertTrue(possibleTypes.contains(carType));
     }
-   /* @Test
-    public void checkLightsStatus() {
+   @Test
+    public void checkLightsStatusDay() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Car car = (Car) context.getBean("hasLightsOn");
+        Car car = (Car) context.getBean("selectCar");
         //When
         boolean lightsOn = car.hasHeadlightsTurnedOn();
-        System.out.println(lightsOn);
+
         //Then
 
-        Assertions.assertTrue(lightsOn);
-    }*/
+        Assertions.assertFalse(lightsOn);
+    }
 }

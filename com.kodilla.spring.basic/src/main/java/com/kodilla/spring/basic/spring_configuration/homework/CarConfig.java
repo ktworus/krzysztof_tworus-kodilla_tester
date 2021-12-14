@@ -37,8 +37,9 @@ public class CarConfig {
         }
         return car;
     }
-    /*@Bean
+
+
     public boolean hasLightsOn() {
         return car.hasHeadlightsTurnedOn();
-    }*/
+    }
 }
