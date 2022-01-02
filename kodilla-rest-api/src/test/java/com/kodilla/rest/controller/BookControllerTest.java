@@ -33,18 +33,11 @@ class BookControllerTest {
         //given
        BookService bookServiceMock = Mockito.mock(BookService.class);
        BookController bookController = new BookController(bookServiceMock);
-       /*List<BookDto> booksList = new ArrayList<>();*/
 
-
-       /*Mockito.when(bookServiceMock.getBooks()).thenReturn(booksList);*/
-
-       BookDto bookDtoNew = new BookDto("aaa","bbb");
+       BookDto bookDtoNew = new BookDto("ccc","ddd");
        bookController.addBook(bookDtoNew);
 
-       /*List<BookDto> result = bookController.getBooks();*/
-
-       //assertEquals(1,result.size());
-//Mockito.verify()
+       Mockito.verify(bookServiceMock).addBook(bookDtoNew);
 
     }
 
