@@ -9,9 +9,9 @@ public class PersonTestSuite {
 
 
     @ParameterizedTest
-    @MethodSource(value = "PersonSource.provideStringsForTestingPersonBMI())"
-    public void shouldProvideBMIDescription(PersonSource personSource, String expected) {
-        Person person = new Person(44,55);
+    @MethodSource(value = "com.kodilla.parametrized_tests.homework.PersonSource#provideStringsForTestingPersonBMI")
+    public void shouldProvideBMIDescription(Person person, String expected) {
+
         assertEquals(expected, person.getBMI());
 }
 }
