@@ -5,6 +5,7 @@ import com.kodilla.execution_model.homework.Shop;
 import org.junit.jupiter.api.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,16 +13,14 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ShopTestSuite {
     Shop shop = new Shop();
-    Order order1 = new Order(44.55, LocalDate.of(2020, 12, 12), "john");
-    Order order2 = new Order(25.55, LocalDate.of(2020,11,11),"james");
-    Order order3 = new Order(20.9, LocalDate.of(2021,11,11),"jim");
+
 
     @Test
     public void shouldAddOrderToShop() {
-        //When
+        int numberOfExistingOrders = shop.getSize();
+        shop.addOrder(new Order(22.33, LocalDate.of(2021,01,01), "jack"));
         int numberOfOrders = shop.getSize();
-        //Then
-        assertEquals(3, numberOfOrders);
+        assertEquals(numberOfExistingOrders+1, numberOfOrders);
    }
     @Test
     public void shouldGetOrderBetweenDates() {
@@ -66,8 +65,11 @@ public class ShopTestSuite {
             assertEquals(0, shop.getSize());
         }
 
-        @BeforeEach
+       @BeforeEach
         public void initializeShop () {
+        Order order1 = new Order(44.55, LocalDate.of(2020, 12, 12), "john");
+        Order order2 = new Order(25.55, LocalDate.of(2020,11,11),"james");
+        Order order3 = new Order(20.9, LocalDate.of(2021,11,11),"jim");
             shop.addOrder(order1);
             shop.addOrder(order2);
             shop.addOrder(order3);
