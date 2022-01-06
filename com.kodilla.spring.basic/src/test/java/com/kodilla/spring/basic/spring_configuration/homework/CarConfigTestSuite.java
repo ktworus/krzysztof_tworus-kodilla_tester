@@ -30,7 +30,7 @@ public class CarConfigTestSuite {
         Car car = (Car) context.getBean("selectCar");
         //When
         String carType = car.getCarType();
-        System.out.println(carType);
+
         //Then
         List<String> possibleTypes = Arrays.asList("SUV", "Sedan", "Cabrio");
         Assertions.assertTrue(possibleTypes.contains(carType));
