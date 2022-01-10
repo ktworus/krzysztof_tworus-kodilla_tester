@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class AllegroTestingAppCss {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\chrome\\chromedriver.exe");
@@ -16,19 +18,24 @@ public class AllegroTestingAppCss {
         driver.get("https://allegro.pl");
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body[1]/div[3]/div[9]/div[1]/div[1]/div[1]/div[1]/div[2]")));
-        WebElement buttonAccept = driver.findElement(By.xpath("//body[1]/div[3]/div[9]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role=\"alertdialog\"]")));
+        WebElement buttonAccept = driver.findElement(By.xpath("//button[@data-role=\"accept-consent\"]"));
         buttonAccept.click();
 
-       WebElement inputField = driver.findElement(By.cssSelector(".allegro.metrumHeader>form>.mpof_ki mqu1_21 mp4t_0 m3h2_0 mryx_0 munh_0 mgn2_14 mp0t_0a mgmw_wo mli8_k4 _535b5_3gmLS mp7g_oh"));
-       inputField.sendKeys("mavic mini");
-
-        WebElement categoryCombo = driver.findElement(By.xpath("//select[1]"));
+        WebElement inputField = driver.findElement(By.cssSelector("div > form > input"));
+        inputField.sendKeys("mavic mini");
+        WebElement categoryCombo = driver.findElement(By.cssSelector("div > select"));
         Select categorySelect = new Select(categoryCombo);
         categorySelect.selectByIndex(3);
 
-        WebElement buttonSearch = driver.findElement(By.xpath("//body[1]/div[3]/div[4]/header[1]/div[1]/div[1]/div[1]/div[1]/form[1]/button[1]"));
+        WebElement buttonSearch = driver.findElement(By.cssSelector("form > button"));
         buttonSearch.click();
 
+        List<WebElement> elements = driver.findElements(By.cssSelector("section > article"));
+        for (WebElement webelement:
+             elements) {
+            System.out.println(webelement.getText());
+
+        }
     }
 }
