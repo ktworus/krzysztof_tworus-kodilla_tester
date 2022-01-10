@@ -17,18 +17,18 @@ public class AllegroTestingApp {
         driver.get("https://allegro.pl");
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body[1]/div[3]/div[9]/div[1]/div[1]/div[1]/div[1]/div[2]")));
-        WebElement buttonAccept = driver.findElement(By.xpath("//body[1]/div[3]/div[9]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role=\"alertdialog\"]")));
+        WebElement buttonAccept = driver.findElement(By.xpath("//button[@data-role=\"accept-consent\"]"));
         buttonAccept.click();
 
-       WebElement inputField = driver.findElement(By.xpath("//input[1]"));
+        WebElement inputField = driver.findElement(By.xpath("//form[@action=\"/listing\"]/input[1]"));
        inputField.sendKeys("mavic mini");
 
-        WebElement categoryCombo = driver.findElement(By.xpath("//select[1]"));
+        WebElement categoryCombo = driver.findElement(By.xpath("//select[@aria-label=\"Kategoria i opcje wyszukiwania\"]"));
         Select categorySelect = new Select(categoryCombo);
         categorySelect.selectByIndex(3);
 
-        WebElement buttonSearch = driver.findElement(By.xpath("//body[1]/div[3]/div[4]/header[1]/div[1]/div[1]/div[1]/div[1]/form[1]/button[1]"));
+        WebElement buttonSearch = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
         buttonSearch.click();
 
     }
